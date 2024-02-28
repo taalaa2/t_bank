@@ -86,5 +86,5 @@ end)
 
 function LOG(message, color)
     local connect = {  {  ["description"] = message, ["color"] = color, ["footer"] = { ["text"] = os.date("Date:\n📅 %d.%m.%Y \n⏰ %X"), }, } }
-    PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = 'Taala-Scripts', embeds = connect}), { ['Content-Type'] = 'application/json' })
+    PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = 'T_BANK', embeds = connect}), { ['Content-Type'] = 'application/json' })
 end
