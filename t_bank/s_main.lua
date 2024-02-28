@@ -25,7 +25,7 @@ lib.callback.register('t_bank:DepositMoney', function(source, amount)
             xPlayer.removeMoney(amount)
             xPlayer.addAccountMoney('bank', amount)
             notify('Sinä tallettit pankki tilillesi ' ..amount.. '€', 'success')
-            LOG('## Nordea - Talletus \n\n Pelaaja: **' ..GetPlayerName(source).. '** \n\n Talletti: **' ..amount.. '€** \n\n RP-Nimi: **' ..xPlayer.getName().. '**')
+            LOG('## Pankki - Talletus \n\n Pelaaja: **' ..GetPlayerName(source).. '** \n\n Talletti: **' ..amount.. '€** \n\n RP-Nimi: **' ..xPlayer.getName().. '**')
         else
             notify('Valitse oikea käteis määrä!', 'error')
         end
@@ -41,7 +41,7 @@ lib.callback.register('t_bank:WithrawMoney', function(source, amount)
     if bank > amount - 1 then
         xPlayer.removeAccountMoney('bank', amount)
         xPlayer.addAccountMoney('money', amount)
-        LOG('## Nordea - Nosto \n\n Pelaaja: **' ..GetPlayerName(source).. '** \n\n Nosti: **' ..amount.. '€** \n\n RP-Nimi: **' ..xPlayer.getName().. '**')
+        LOG('## Pankki - Nosto \n\n Pelaaja: **' ..GetPlayerName(source).. '** \n\n Nosti: **' ..amount.. '€** \n\n RP-Nimi: **' ..xPlayer.getName().. '**')
     else
         notify('Pankissa ei ole näin paljoa rahaa! Valitse oikea määrä.', 'error')
     end
