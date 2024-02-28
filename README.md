@@ -6,3 +6,5 @@ Simple banking script for FiveM
 
 
 ## Only ESX Framework!
+
+![showcase](https://github.com/taalaa2/t_bank/assets/129396220/657f14ba-3005-44d5-a322-30b024908da9)
