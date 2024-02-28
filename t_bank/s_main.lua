@@ -1,5 +1,7 @@
 local ESX = exports['es_extended']:getSharedObject()
 
+local webhook = 'PUT YOUR DISCORD WEBHOOK HERE'
+
 local function notify(viesti, type)
     lib.notify(source, {
         description = viesti,
@@ -83,7 +85,6 @@ lib.callback.register('t_bank:TrasferMoney', function(source, id, amount)
 end)
 
 function LOG(message, color)
-    local logit = 'https://discord.com/api/webhooks/1212362591876161556/z8pBrZ4UJhKanfhCQlvGxD9EMEYBwWfXGOSzdspwUngo1MYRQT1rTGvdwbPTrO9_DhF-'
-    local connect = {  {  ["description"] = message, ["color"] = color, ["footer"] = { ["text"] = os.date("Päiväys:\n📅 %d.%m.%Y \n⏰ %X"), }, } }
-    PerformHttpRequest(logit, function(err, text, headers) end, 'POST', json.encode({username = 'Taala-Scripts', embeds = connect}), { ['Content-Type'] = 'application/json' })
+    local connect = {  {  ["description"] = message, ["color"] = color, ["footer"] = { ["text"] = os.date("Date:\n📅 %d.%m.%Y \n⏰ %X"), }, } }
+    PerformHttpRequest(webhook, function(err, text, headers) end, 'POST', json.encode({username = 'Taala-Scripts', embeds = connect}), { ['Content-Type'] = 'application/json' })
 end
