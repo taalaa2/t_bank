@@ -1,4 +1,4 @@
-## FiveM Banking.
+Simple banking script for FiveM
 
 ## Requirements
 - **https://github.com/overextended/ox_lib**
